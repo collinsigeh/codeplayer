@@ -1,6 +1,7 @@
 body{
     margin: 0;
     padding: 0;
+    font-family: ReithSans, Arial, Helvetica, freesans, sans-serif;;
 }
 
 nav{
@@ -40,6 +41,8 @@ li{
 
 textarea{
     resize: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
 }
 
 .code-input{

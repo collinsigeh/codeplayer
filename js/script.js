@@ -11,10 +11,9 @@ if(screenHeight > appHeight)
 
 $(".interface").height(appHeight);
 
-$("#briigo-cicp-htmlInput").keyup(function(){
+$("#briigo-cicp-htmlInput").on("change keyup paste", function(){
     htmlValue = $(this).val();
 
-    $("#briigo-cicp-output").html(htmlValue);
-    
+    $("#briigo-cicp-output").contents().find('html').html(htmlValue);
 });
     
