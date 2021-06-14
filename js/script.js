@@ -15,5 +15,6 @@ $("#briigo-cicp-htmlInput").keyup(function(){
     htmlValue = $(this).val();
 
     $("#briigo-cicp-output").html(htmlValue);
+    
 });
     
