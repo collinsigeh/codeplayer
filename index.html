@@ -17,10 +17,10 @@
 
         <div id="app-nav">
             <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Output</li>
+                <li><button id="html">HTML</button></li>
+                <li><button id="css">CSS</button></li>
+                <li><button id="javascript">JavaScript</button></li>
+                <li><button id="output">Output</button></li>
             </ul>
         </div>
 
@@ -31,6 +31,31 @@
             </ul>
         </div>
     </nav>
+    
+    <div id="app-body">
+        <div id="html" class="interface">
+            <h2>HTML</h2>
+           <textarea id="htmlInput" class="code-input"></textarea>
+        </div>
+        
+        <div id="css" class="interface">
+            <h2>CSS</h2>
+            <textarea id="cssInput" class="code-input"></textarea>
+         </div>
+         
+        <div id="javascript" class="interface">
+            <h2>JavaScript</h2>
+            <textarea id="javascriptInput" class="code-input"></textarea>
+         </div>
+    
+        <div class="interface">
+            <h2>Output</h2>
+
+            <div id="output">
+
+            </div>
+        </div>
+    </div>
     
     <script src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>

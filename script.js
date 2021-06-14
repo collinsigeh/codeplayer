@@ -1,2 +1,0 @@
-// alert(screen.height);
-    
