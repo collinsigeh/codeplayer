@@ -63,3 +63,7 @@ textarea{
     height: 97%;
     border: none;
 }
+
+.hidden{
+    display: none;
+}

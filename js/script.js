@@ -16,4 +16,30 @@ $("#briigo-cicp-htmlInput").on("change keyup paste", function(){
 
     $("#briigo-cicp-output").contents().find('html').html(htmlValue);
 });
+
+$(".toggleButton").click(function(){
+
+    var panelId = $(this).attr("id") + "Panel";
+
+    if($("#" + panelId).hasClass("hidden") == false)
+    {
+        if($('.hidden').length < 3)
+        {
+            $("#" + panelId).addClass("hidden");
+        }
+    }
+    else
+    {
+        $("#" + panelId).removeClass("hidden");
+    }
+
+    var visibleInterfaces = 4 - $('.hidden').length;
+    
+    var panelWidth = 100 / visibleInterfaces;
+    panelWidth = panelWidth - (4.8 / visibleInterfaces);
+
+    alert (panelWidth);
+    
+    $(".interface").width(panelWidth + "%");
+});
     
