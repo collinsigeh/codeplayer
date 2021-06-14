@@ -4,6 +4,16 @@ var htmlValue = "";
 var cssValue = "";
 var javascriptValue = "";
 
+function updateOutput(){
+    htmlValue = $("#briigo-cicp-htmlInput").val();
+    cssValue = $("#briigo-cicp-cssInput").val();
+    javascriptValue = $("#briigo-cicp-javascriptInput").val();
+
+    $("#briigo-cicp-output").contents().find('html').html("<html><head><style>"
+    + cssValue + "</style></head><body>"
+    + htmlValue + "</body></html>");
+}
+
 if(screenHeight > appHeight)
 {
     appHeight = screenHeight - 208;
@@ -11,10 +21,12 @@ if(screenHeight > appHeight)
 
 $(".interface").height(appHeight);
 
-$("#briigo-cicp-htmlInput").on("change keyup paste", function(){
-    htmlValue = $(this).val();
+$(document).ready(function(){
+    updateOutput();
+});
 
-    $("#briigo-cicp-output").contents().find('html').html(htmlValue);
+$(".code-input").on("change keyup paste", function(){
+    updateOutput();
 });
 
 $(".toggleButton").click(function(){
