@@ -12,6 +12,10 @@ function updateOutput(){
     $("#briigo-cicp-output").contents().find('html').html("<html><head><style>"
     + cssValue + "</style></head><body>"
     + htmlValue + "</body></html>");
+
+    document.getElementById("briigo-cicp-output")
+        .contentWindow
+        .eval(javascriptValue);
 }
 
 if(screenHeight > appHeight)
